@@ -125,8 +125,8 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 };
 
 HTMLActuator.prototype.message = function (won) {
-  var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var type    = won ? "Next-CEO" : "game-over";
+  var message = won ? "You are Next-CEO!" : "Game over!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
@@ -134,6 +134,6 @@ HTMLActuator.prototype.message = function (won) {
 
 HTMLActuator.prototype.clearMessage = function () {
   // IE only takes one value to remove at a time.
-  this.messageContainer.classList.remove("game-won");
+  this.messageContainer.classList.remove("Next-CEO");
   this.messageContainer.classList.remove("game-over");
 };
